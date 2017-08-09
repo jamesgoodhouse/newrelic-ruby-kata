@@ -12,6 +12,8 @@ set :deploy_to, "/home/ec2-user/app2"
 
 set :ssh_options, { forward_agent: true }
 
+set :branch, 'add_cap'
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -36,3 +38,5 @@ set :ssh_options, { forward_agent: true }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+after 'deploy:publishing', 'deploy:restart'
