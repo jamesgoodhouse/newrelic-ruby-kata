@@ -54,6 +54,9 @@ end
 
 group :development do
   gem 'RedCloth'
+  gem 'capistrano', '~> 3.6'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
 
 group :test do

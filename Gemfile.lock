@@ -37,6 +37,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    airbrussh (1.3.0)
+      sshkit (>= 1.6.1, != 1.7.0)
     arel (6.0.0)
     autoprefixer-rails (5.1.11)
       execjs
@@ -49,6 +51,20 @@ GEM
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
+    capistrano (3.9.0)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (1.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.3.0)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rbenv (2.1.1)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -85,7 +101,9 @@ GEM
     minitest (5.6.1)
     multi_json (1.11.0)
     multi_xml (0.5.5)
-    newrelic_rpm (3.12.0.288)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.1.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pg (0.18.2)
@@ -145,6 +163,9 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    sshkit (1.14.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     test-unit (3.0.9)
       power_assert
     thor (0.19.1)
@@ -170,13 +191,15 @@ DEPENDENCIES
   RedCloth
   bootstrap-sass (~> 3.3.4)
   byebug
+  capistrano (~> 3.6)
+  capistrano-rails
+  capistrano-rbenv
   coffee-rails (~> 4.1.0)
   dalli
   httparty
   jbuilder (~> 2.0)
   jquery-rails
   memcachier
-  newrelic_rpm (>= 3.6.8)
   nokogiri
   pg (>= 0.14.1)
   puma
@@ -191,3 +214,9 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+RUBY VERSION
+   ruby 2.2.2p95
+
+BUNDLED WITH
+   1.15.3
