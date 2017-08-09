@@ -56,6 +56,7 @@ group :development do
   gem 'RedCloth'
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails'
+  gem 'capistrano3-puma'
   gem 'capistrano-rbenv'
 end
 
