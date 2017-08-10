@@ -32,3 +32,11 @@ Work in teams to determine which sections of code are in need of improvement.
 Use good git practices to fix the code. Setup deploy markers so that you can see clearly who made what changes when to the code. Rollback changes if needed.
 
 Solve as many of the Katas as you can. There are seven distinct Katas in this application that can be torn apart and fixed by using your awesome dev abilities and the deep metrics that New Relic provides.
+
+Step 6
+-------
+Deploying is easy
+`gem install httparty`
+`export APP_ID=<appid>`
+`export API_KEY=<api_key>`
+`ruby deploy.rb`
